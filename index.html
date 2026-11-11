@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tinevimbo Musingadi</title>
+  <meta name="description" content="Tinevimbo Musingadi: AI/ML engineer. Custom model training and fine-tuning, edge and vision models, production AI systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="toggle" id="theme" aria-label="Toggle colour theme">theme</button>
+<main class="paper">
+
+  <header class="title">
+    <div class="venue">Working notes &middot; Harare, Zimbabwe &middot; 2026</div>
+    <h1>Tinevimbo Musingadi</h1>
+    <p class="author">AI/ML engineer &mdash; custom model training, edge &amp; vision models, production AI systems</p>
+    <div class="links">
+      <a href="https://github.com/TinevimboMusingadi">GitHub</a>
+      <a href="https://github.com/musingadi360">GitHub (work)</a>
+      <a href="https://www.linkedin.com/in/kingtine">LinkedIn</a>
+      <a href="https://keeper-frontend-249798843070.us-east4.run.app/books">Keeper AI (live)</a>
+      <a href="mailto:tinevimbomusingadi1@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section class="abstract">
+    <h2>Abstract</h2>
+    <p>I train and fine-tune domain-specific models &mdash; vision, vision-language, audio and language &mdash; and get them running where the work actually happens: on TPU clusters during training, and on small, constrained hardware in deployment. Alongside the modelling I build the software around it: agent systems, gateways, payment backends. The thread through all of it is turning a messy field problem into data, labels, evaluations and a model that keeps working after it ships.</p>
+  </section>
+
+  <h2><span class="num">1</span>Model training &amp; fine-tuning</h2>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/VLM-Distillation">VLM-Distillation: frontier vision into compact edge models</a></h3>
+    <div class="meta">2026 &middot; distillation &middot; edge</div>
+    <p>Compresses Gemini's visual understanding and spatial reasoning into a small vision-language model, then quantizes it so it can run on edge hardware without a round-trip to the cloud.</p>
+    <div class="tags"><span>PyTorch</span><span>Gemini Vision</span><span>KD loss</span><span>quantization</span></div>
+  </article>
+
+  <article class="entry">
+    <h3>QX Health: on-device acoustic screening <span class="private">private</span></h3>
+    <div class="meta">2026 &middot; Quantilytix AI Lab &middot; audio + tabular</div>
+    <p>Adapted an encoder-free Gemma architecture into a cough-detection model that fuses raw audio with tabular clinical features, built for low-latency on-device inference.</p>
+    <div class="tags"><span>Gemma</span><span>audio</span><span>multimodal fusion</span><span>edge</span></div>
+  </article>
+
+  <article class="entry">
+    <h3>QX Decision &amp; <a href="https://github.com/Quantilytix/Ledger-Lite">Ledger-Lite</a>: domain models at 2% of the cost</h3>
+    <div class="meta">2026 &middot; Quantilytix AI Lab &middot; fine-tuning</div>
+    <p>Fine-tuned reasoning and decision models for financial tasks, taking inference from $8&ndash;$12 per 8k-token task on a frontier API to $0.17 &mdash; over 98% cheaper.</p>
+    <div class="tags"><span>Qwen</span><span>Gemma 4</span><span>SFT</span><span>TPU</span><span>HF &harr; GCS sync</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/GRPO-tpu2">GRPO-tpu2</a> &amp; <a href="https://github.com/TinevimboMusingadi/sft-tpu">sft-tpu</a>: SFT and RL on TPU clusters</h3>
+    <div class="meta">2026 &middot; Google Cloud TPU Builder Program</div>
+    <p>Supervised fine-tuning on a single v6e-8 VM and multi-host Group Relative Policy Optimization on a v6e-64 cluster with MaxText and Cluster Toolkit, exporting checkpoints back to Hugging Face for serving.</p>
+    <div class="tags"><span>JAX</span><span>MaxText</span><span>GRPO</span><span>Slurm</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/knowing-when-to-think-fast-slow">Knowing when to think fast and slow</a></h3>
+    <div class="meta">2026 &middot; adaptive compute &middot; <a href="https://medium.com/@tine2musi1/my-structured-chain-of-thought-experiment-c8f85647e9cc">article</a></div>
+    <p>Routing between fast answers and deliberate chain-of-thought based on model confidence and prompt difficulty, with Structured CoT training recipes evaluated using Wilson intervals and paired bootstrap tests.</p>
+    <div class="tags"><span>Tunix</span><span>GRPO</span><span>calibration</span></div>
+  </article>
+
+  <h2><span class="num">2</span>Vision, multimodal &amp; field data</h2>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/OmniEmbed">OmniEmbed: universal embeddings from Qwen3-Omni</a></h3>
+    <div class="meta">2026 &middot; representation learning</div>
+    <p>Reverse-engineers a shared embedding space across text, audio and image from an omni-modal model, studying how the modalities align and where the useful latent signal lives.</p>
+    <div class="tags"><span>Qwen3-Omni</span><span>embeddings</span><span>cross-modal</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/VLM-Image-search">VLM-Image-search</a> &amp; <a href="https://github.com/TinevimboMusingadi/local-image-search">local-image-search</a></h3>
+    <div class="meta">2026 &middot; retrieval</div>
+    <p>Zero-shot text-to-image and image-to-image search over Qwen3-VL embeddings with a FAISS index; the local variant runs fully offline.</p>
+    <div class="tags"><span>Qwen3-VL</span><span>FAISS</span><span>FastAPI</span></div>
+  </article>
+
+  <article class="entry">
+    <h3>Third Umpire: sparse sampling for sports video <span class="private">private</span></h3>
+    <div class="meta">2026 &middot; Educait spin-out &middot; computer vision</div>
+    <p>Delivery tracking from broadcast cricket footage. Sampling frames sparsely instead of decoding everything cut compute by more than 90% and made inference 100&times; faster at 94% accuracy within &plusmn;0.6s.</p>
+    <div class="tags"><span>OpenCV</span><span>tracking</span><span>video pipelines</span></div>
+  </article>
+
+  <article class="entry">
+    <h3>Ziso Counter Lens <span class="private">private</span></h3>
+    <div class="meta">2026 &middot; Quantilytix &middot; edge CV</div>
+    <p>Edge computer-vision counter for real-time customer and inventory tracking in retail spaces.</p>
+    <div class="tags"><span>detection</span><span>real-time</span><span>edge</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/GPNCM">GPNCM: ground-based precipitation nowcasting</a></h3>
+    <div class="meta">2026 &middot; Deep Learning Indaba poster &middot; spatiotemporal ML</div>
+    <p>Short-term local rain forecasts from ground-station sensor streams. It follows an earlier sensor-based flood warning system I built for rural communities.</p>
+    <div class="tags"><span>time series</span><span>sensors</span><span>forecasting</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/Quantilytix/izwi_collect">izwi_collect</a> &amp; izwi_listen</h3>
+    <div class="meta">2026 &middot; low-resource speech data</div>
+    <p>Offline-first Shona voice capture and a blind-listening evaluation harness &mdash; data collection designed for places with poor connectivity.</p>
+    <div class="tags"><span>speech</span><span>offline-first</span><span>evaluation</span></div>
+  </article>
+
+  <h2><span class="num">3</span>Agents &amp; production systems</h2>
+
+  <article class="entry featured">
+    <h3><a href="https://keeper-frontend-249798843070.us-east4.run.app/books">Keeper AI: an autonomous financial analyst</a></h3>
+    <div class="meta">Dec 2025 &ndash; present &middot; Latentia-zw &middot; live on Cloud Run</div>
+    <p>A multi-agent system &mdash; Keeper orchestrates, Clerk ingests and books, Analyst verifies &mdash; that reads your documents and does your accounts. Ledger maths runs in a sandboxed Python workspace so the numbers are computed, not generated. Documents sit in a layered neuro-symbolic index, and work is organised as Books and Sessions, like a notebook.</p>
+    <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Gemini</span><span>sandboxed execution</span><span>MongoDB / Firestore</span></div>
+  </article>
+
+  <article class="entry">
+    <h3>Router-AI: enterprise model gateway <span class="private">private</span></h3>
+    <div class="meta">2026 &middot; IQ360 Africa</div>
+    <p>Routes each request across self-hosted and cloud models by complexity, latency budget and cost, with streaming fallbacks, semantic caching, token accounting and circuit breakers (99.9% uptime).</p>
+    <div class="tags"><span>FastAPI</span><span>Redis</span><span>async I/O</span></div>
+  </article>
+
+  <article class="entry">
+    <h3>PayIQ: telecom &amp; government payments <span class="private">private</span></h3>
+    <div class="meta">2026 &middot; IQ360 Africa</div>
+    <p>High-concurrency Spring Boot services for payment processing, reconciliation and audit trails, with real-time analytics for NetOne and compliance portals for government.</p>
+    <div class="tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>React</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/Keeper_deep_agent">Keeper Deep Agent</a> &middot; <a href="https://github.com/TinevimboMusingadi/fashion-assitance">Fashion Assistant</a> &middot; <a href="https://github.com/TinevimboMusingadi/gemini-live-computer-use">Gemini Live computer use</a></h3>
+    <div class="meta">2025 &ndash; 2026 &middot; agent harnesses</div>
+    <p>Planning tools, filesystem sandboxes and hierarchical sub-agents for long tasks; tool-calling agents with memory; real-time audio/vision agents driving a desktop.</p>
+    <div class="tags"><span>LangGraph</span><span>tool calling</span><span>Gemini Live</span></div>
+  </article>
+
+  <h2><span class="num">4</span>Inference &amp; hardware</h2>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/ssd-tpu-">ssd-tpu: Speculative Speculative Decoding on TPUs</a></h3>
+    <div class="meta">2026 &middot; JAX reimplementation of Kumar et al., ICLR 2026</div>
+    <p>Tree-draft verification and KV-cache management for Gemma and Qwen on TPUs, attacking the memory-bandwidth bottleneck of token-by-token generation.</p>
+    <div class="tags"><span>JAX</span><span>Flax</span><span>TPU v6e</span></div>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/Qwen-on-tpu">Qwen-on-tpu</a> &amp; <a href="https://github.com/TinevimboMusingadi/Gemma-4-tpu-inference">Gemma-4-tpu-inference</a></h3>
+    <div class="meta">2026 &middot; serving &amp; benchmarking</div>
+    <p>vLLM serving on TPUs with a side-by-side dashboard comparing autoregressive, n-gram, draft-model and EAGLE-style decoding on latency, throughput and acceptance rate.</p>
+    <div class="tags"><span>vLLM</span><span>Next.js</span><span>SSE</span><span>Ironwood</span></div>
+  </article>
+
+  <h2><span class="num">5</span>Interpretability</h2>
+
+  <article class="entry">
+    <h3><a href="https://github.com/TinevimboMusingadi/lm-world-model">lm-world-model</a> &amp; <a href="https://github.com/TinevimboMusingadi/J-nuerons">J-neurons</a></h3>
+    <div class="meta">2026 &middot; mechanistic interpretability</div>
+    <p>Do small language models simulate computation or memorise surface patterns? Linear probes, logit lens and activation patching over 10,000+ synthetic execution traces, plus neuron-level specialization studies.</p>
+    <div class="tags"><span>TransformerLens</span><span>probing</span><span>activation patching</span></div>
+  </article>
+
+  <h2><span class="num">6</span>Talks</h2>
+  <article class="entry">
+    <p>Deep Learning Indaba 2026 (poster, GPNCM) &middot; GDG DevFest, <em>Building Human-AI Systems for Responsible AI</em> &middot; Deep Learning Indaba, <em>What are AI Agents</em> &middot; Zimbabwe AI Week, <em>Local Language LLMs</em> &middot; U.S. Embassy &amp; HIT, <em>AI for Social Good</em> &middot; ISEF 4th place (SAILFLOW, MIT Solve).</p>
+  </article>
+
+  <div class="palette" aria-hidden="true">
+    <i style="background:#EDE0D4"></i><i style="background:#E6CCB2"></i><i style="background:#DDB892"></i><i style="background:#B08968"></i><i style="background:#7F5539"></i><i style="background:#9C6644"></i>
+  </div>
+  <footer>B.Tech (Hons) Information Security &amp; Assurance, Harare Institute of Technology &middot; &copy; 2026 Tinevimbo Musingadi</footer>
+</main>
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('theme');
+    try { var t = localStorage.getItem('theme'); if (t) root.setAttribute('data-theme', t); } catch (e) {}
+    btn.addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') === 'dark' ||
+        (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+      var next = dark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
