@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tinevimbo Musingadi</title>
-  <meta name="description" content="Tinevimbo Musingadi: AI/ML engineer. Custom model training and fine-tuning, edge and vision models, production AI systems.">
+  <meta name="description" content="Tinevimbo Musingadi: AI/ML engineer. Model training and fine-tuning, vLLM inference, AI agents, interpretability research and software engineering.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Lora:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,10 +17,12 @@
     <span class="mark">Tinevimbo Musingadi</span>
     <nav>
       <a href="#training">Training</a>
-      <a href="#vision">Vision &amp; edge</a>
-      <a href="#systems">Agents &amp; systems</a>
-      <a href="#inference">Inference</a>
+      <a href="#inference">vLLM</a>
       <a href="#research">Research</a>
+      <a href="#vision">Vision</a>
+      <a href="#agents">Agents</a>
+      <a href="#software">Software</a>
+      <a href="#skills">Skills</a>
     </nav>
     <button class="toggle" id="theme" aria-label="Toggle colour theme">theme</button>
   </div>
@@ -30,24 +32,35 @@
 
   <p class="eyebrow">AI / ML Engineer &middot; Harare, Zimbabwe</p>
   <h1>Custom models,<br>shipped to the field.</h1>
-  <p class="subtitle">Model training &amp; fine-tuning &middot; Edge &amp; vision &middot; Production AI systems</p>
+  <p class="subtitle">Model training &middot; vLLM inference &middot; AI agents &middot; Research &middot; Software engineering</p>
   <div class="rule"></div>
-  <p class="lede">I train and fine-tune domain-specific models &mdash; vision, vision-language, audio and language &mdash; and get them running where the work happens: on TPU clusters during training, on small hardware in deployment. Around the models I build the software: agent systems, gateways, payment backends. The thread through all of it is turning a messy field problem into data, labels, evaluations and a model that keeps working after it ships.</p>
+  <p class="lede">I train and fine-tune domain-specific models &mdash; vision, vision-language, audio and language &mdash; serve them fast with vLLM on TPUs, and build the agents and software around them. Alongside that I do research on how models reason and what happens inside them. The thread through all of it is turning a messy real-world problem into data, labels, evaluations and a system that keeps working after it ships.</p>
+  <div class="stats">
+    <div><b>98%</b><span>inference cost cut with fine-tuned domain models</span></div>
+    <div><b>v6e-64</b><span>multi-host TPU cluster for RL training</span></div>
+    <div><b>100&times;</b><span>faster video inference via sparse sampling</span></div>
+    <div><b>Live</b><span>Keeper AI, an autonomous financial analyst</span></div>
+  </div>
   <div class="links">
     <a class="primary" href="https://keeper-frontend-249798843070.us-east4.run.app/books">Keeper AI &mdash; live</a>
     <a href="https://github.com/TinevimboMusingadi">GitHub</a>
     <a href="https://github.com/musingadi360">GitHub (work)</a>
     <a href="https://www.linkedin.com/in/kingtine">LinkedIn</a>
+    <a href="https://medium.com/@tine2musi1">Medium</a>
     <a href="mailto:tinevimbomusingadi1@gmail.com">Email</a>
   </div>
 
   <nav class="toc" aria-label="Contents">
     <a href="#training"><span>01</span>Model Training &amp; Fine-Tuning</a>
-    <a href="#vision"><span>02</span>Vision, Multimodal &amp; Edge</a>
-    <a href="#systems"><span>03</span>Agents &amp; Production Systems</a>
-    <a href="#inference"><span>04</span>Inference &amp; Hardware</a>
-    <a href="#research"><span>05</span>Interpretability Research</a>
-    <a href="#talks"><span>06</span>Talks &amp; Education</a>
+    <a href="#inference"><span>02</span>Inference &amp; Serving (vLLM, TPUs)</a>
+    <a href="#research"><span>03</span>Research: Reasoning &amp; Interpretability</a>
+    <a href="#vision"><span>04</span>Vision, Multimodal &amp; Edge</a>
+    <a href="#agents"><span>05</span>AI Agents</a>
+    <a href="#educait"><span>06</span>Educait &amp; Spin-Outs</a>
+    <a href="#software"><span>07</span>Software Engineering</a>
+    <a href="#competitions"><span>08</span>Competitions &amp; Hackathons</a>
+    <a href="#skills"><span>09</span>Skills</a>
+    <a href="#talks"><span>10</span>Talks &amp; Education</a>
   </nav>
 
   <section id="training">
@@ -56,118 +69,270 @@
     <div class="table">
       <div class="thead"><span>Project</span><span>What it does</span></div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/VLM-Distillation">VLM-Distillation</a></h3><div class="when">2026 &middot; distillation</div></div>
-        <div><p>Compresses Gemini's visual understanding and spatial reasoning into a small vision-language model, then quantizes it to run on edge hardware without a cloud round-trip.</p><div class="tags"><span>PyTorch</span><span>KD loss</span><span>quantization</span></div></div>
+        <div><h3><a href="https://github.com/Quantilytix/Ledger-Lite">Ledger-Lite</a> &amp; QX Decision</h3><div class="when">2026 &middot; Quantilytix AI Lab</div></div>
+        <div><p>Fine-tuned financial reasoning and decision models: inference from $8&ndash;$12 per 8k-token task on a frontier API down to $0.17 &mdash; over 98% cheaper.</p><div class="tags"><span>Qwen</span><span>Gemma 4</span><span>SFT</span><span>domain adaptation</span></div></div>
       </div>
       <div class="row">
         <div><h3>QX Health <span class="private">private</span></h3><div class="when">2026 &middot; Quantilytix AI Lab</div></div>
-        <div><p>Adapted an encoder-free Gemma architecture into a cough-detection model fusing raw audio with tabular clinical features, built for low-latency on-device inference.</p><div class="tags"><span>Gemma</span><span>audio</span><span>edge</span></div></div>
+        <div><p>Adapted an encoder-free Gemma architecture into a cough-detection model fusing raw audio with tabular clinical features, built for low-latency on-device inference.</p><div class="tags"><span>Gemma</span><span>audio</span><span>multimodal fusion</span><span>edge</span></div></div>
       </div>
       <div class="row">
-        <div><h3>QX Decision &amp; <a href="https://github.com/Quantilytix/Ledger-Lite">Ledger-Lite</a></h3><div class="when">2026 &middot; Quantilytix AI Lab</div></div>
-        <div><p>Fine-tuned financial reasoning models: inference from $8&ndash;$12 per 8k-token task on a frontier API down to $0.17 &mdash; over 98% cheaper.</p><div class="tags"><span>Qwen</span><span>Gemma 4</span><span>SFT</span><span>HF &harr; GCS</span></div></div>
+        <div><h3>qx-models-exp &amp; RIQ <span class="private">private</span></h3><div class="when">2026 &middot; foundation model runs</div></div>
+        <div><p>Distributed SFT pipelines on Cloud TPUs for Qwen and Gemma 4, with automated weight sync between Hugging Face Hub and GCS buckets.</p><div class="tags"><span>TPU</span><span>JAX</span><span>GCS</span><span>checkpointing</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/GRPO-tpu2">GRPO-tpu2</a> &amp; <a href="https://github.com/TinevimboMusingadi/sft-tpu">sft-tpu</a></h3><div class="when">2026 &middot; TPU Builder Program</div></div>
-        <div><p>SFT on a v6e-8 TPU VM and multi-host GRPO on a v6e-64 cluster with MaxText and Cluster Toolkit; checkpoints exported back to Hugging Face for serving.</p><div class="tags"><span>JAX</span><span>MaxText</span><span>GRPO</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/GRPO-tpu2">GRPO-tpu2</a></h3><div class="when">Sept 2026 &middot; TPU Builder Program</div></div>
+        <div><p>Multi-host Group Relative Policy Optimization on a TPU v6e-64 cluster with MaxText and Cluster Toolkit; checkpoints exported back to Hugging Face for serving.</p><div class="tags"><span>JAX</span><span>MaxText</span><span>GRPO</span><span>Slurm</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/knowing-when-to-think-fast-slow">Thinking fast &amp; slow</a></h3><div class="when">2026 &middot; <a href="https://medium.com/@tine2musi1/my-structured-chain-of-thought-experiment-c8f85647e9cc">article</a></div></div>
-        <div><p>Routes between quick answers and deliberate chain-of-thought by confidence and difficulty; Structured-CoT training evaluated with Wilson intervals and paired bootstrap.</p><div class="tags"><span>Tunix</span><span>calibration</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/sft-tpu">sft-tpu</a></h3><div class="when">2026 &middot; reference implementation</div></div>
+        <div><p>End-to-end supervised fine-tuning on a single v6e-8 TPU VM with MaxText: sharding, dataset packing and JAX memory profiling.</p><div class="tags"><span>MaxText</span><span>v6e-8</span><span>SFT</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/S-CoT-_Training">S-CoT Training</a> &amp; <a href="https://github.com/TinevimboMusingadi/scot-reasoning-">scot-reasoning</a></h3><div class="when">2026 &middot; <a href="https://medium.com/@tine2musi1/my-structured-chain-of-thought-experiment-c8f85647e9cc">article</a></div></div>
+        <div><p>Structured Chain-of-Thought training recipes: typed reasoning steps and verification nodes to stop reasoning drift, trained with TRL and Tunix.</p><div class="tags"><span>TRL</span><span>Tunix</span><span>Orbax</span><span>datasets</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>custom-models-exp <span class="private">private</span></h3><div class="when">2026 &middot; Latentia-zw</div></div>
+        <div><p>Training, fine-tuning and evaluating domain-specific transformers with PEFT and custom evaluation harnesses.</p><div class="tags"><span>PEFT</span><span>LoRA</span><span>evaluation</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/cluster-toolkit">Cluster Toolkit</a> &amp; <a href="https://github.com/TinevimboMusingadi/DeepSpeed">DeepSpeed</a></h3><div class="when">2026 &middot; infrastructure</div></div>
+        <div><p>Provisioning HPC/AI clusters with Cluster Toolkit and Terraform, and DeepSpeed ZeRO configurations for distributed training.</p><div class="tags"><span>Terraform</span><span>Slurm</span><span>ZeRO</span></div></div>
       </div>
     </div>
   </section>
-
+  <section id="inference">
+    <div class="sec-head"><span class="badge">2</span><h2>Inference &amp; Serving (vLLM, TPUs)</h2></div>
+    <p class="sec-intro">Making trained models fast and cheap to run.</p>
+    <div class="table">
+      <div class="thead"><span>Project</span><span>What it does</span></div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/Qwen-on-tpu">Qwen-on-tpu</a></h3><div class="when">July 2026</div></div>
+        <div><p>Speculative decoding benchmark suite for Qwen on TPUs with vLLM: autoregressive, n-gram, draft-model and EAGLE-style modes, a streaming SSE API, a terminal UI and a Next.js dashboard comparing latency, throughput and acceptance rate.</p><div class="tags"><span>vLLM</span><span>Next.js</span><span>SSE</span><span>uv workspace</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/ssd-tpu-">ssd-tpu</a></h3><div class="when">June 2026</div></div>
+        <div><p>JAX implementation of Speculative Speculative Decoding (Kumar, Dao, May &mdash; ICLR 2026) for Gemma and Qwen on TPUs: tree-draft verification and KV-cache management on single- and dual-VM topologies.</p><div class="tags"><span>JAX</span><span>Flax</span><span>TPU v6e</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/Gemma-4-tpu-inference">Gemma-4-tpu-inference</a> &amp; <a href="https://github.com/TinevimboMusingadi/tpu-inference">tpu-inference</a></h3><div class="when">July 2026</div></div>
+        <div><p>Serving Gemma 4 IT with vLLM on Ironwood TPUs: PagedAttention, continuous batching and unified JAX/PyTorch serving.</p><div class="tags"><span>vLLM</span><span>Ironwood</span><span>PyTorch/XLA</span><span>Docker</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>Router-AI <span class="private">private</span></h3><div class="when">2026 &middot; enterprise gateway</div></div>
+        <div><p>Routes each request across self-hosted and cloud models by complexity, latency budget and cost, with streaming fallbacks, semantic caching, token accounting and circuit breakers (99.9% uptime).</p><div class="tags"><span>FastAPI</span><span>Redis</span><span>async I/O</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="research">
+    <div class="sec-head"><span class="badge">3</span><h2>Research: Reasoning &amp; Interpretability</h2></div>
+    <p class="sec-intro">What happens inside the model, and how to make it think only when it needs to.</p>
+    <div class="table">
+      <div class="thead"><span>Project</span><span>What it does</span></div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/knowing-when-to-think-fast-slow">Knowing when to think fast &amp; slow</a></h3><div class="when">April 2026</div></div>
+        <div><p>Adaptive test-time compute: routing between fast answers and deliberate chain-of-thought using confidence, entropy and prompt difficulty. Mixed-action GRPO and SFT, evaluated with Wilson intervals and paired bootstrap.</p><div class="tags"><span>adaptive compute</span><span>GRPO</span><span>calibration</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>mode-switching-llms &amp; reasoning-modes <span class="private">private</span></h3><div class="when">2026</div></div>
+        <div><p>Models that switch between creative, formal-verification and step-by-step maths modes mid-generation, using custom attention masks and activation gating.</p><div class="tags"><span>attention masking</span><span>gating</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/lm-world-model">lm-world-model</a></h3><div class="when">March 2026</div></div>
+        <div><p>Do small language models simulate computation or memorise patterns? Linear probes, logit lens and activation patching over 10,000+ synthetic execution traces.</p><div class="tags"><span>probing</span><span>logit lens</span><span>activation patching</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/J-nuerons">J-neurons</a> &amp; <a href="https://github.com/TinevimboMusingadi/interp-engine">interp-engine</a></h3><div class="when">2026</div></div>
+        <div><p>Neuron-level specialization in transformers (polysemantic vs monosemantic), with attribution, activation patching and weight analysis tools.</p><div class="tags"><span>TransformerLens</span><span>attribution</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>RL for task review <span class="private">private</span></h3><div class="when">2026</div></div>
+        <div><p>Reinforcement learning for asynchronous agents doing automated inspection &mdash; code review and financial compliance auditing &mdash; with shaped rewards.</p><div class="tags"><span>RL</span><span>Gymnasium</span><span>reward shaping</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>diff-edit-software <span class="private">private</span></h3><div class="when">2026 &middot; research tooling</div></div>
+        <div><p>Interactive tool for collecting and annotating token-level reasoning steps and multi-turn edit trajectories for reasoning-model training.</p><div class="tags"><span>annotation</span><span>SQLite/JSONL</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/vishing--bench">vishing-bench</a></h3><div class="when">2026 &middot; AI security</div></div>
+        <div><p>Benchmark of how speech/audio agents hold up against voice-phishing and social-engineering attacks.</p><div class="tags"><span>audio agents</span><span>adversarial eval</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/solid-eureka">solid-eureka</a></h3><div class="when">Late 2025</div></div>
+        <div><p>Early experiments on chain-of-thought prompting, step verification and reasoning-path divergence in open models.</p><div class="tags"><span>CoT</span><span>verification</span></div></div>
+      </div>
+    </div>
+  </section>
   <section id="vision">
-    <div class="sec-head"><span class="badge">2</span><h2>Vision, Multimodal &amp; Edge</h2></div>
+    <div class="sec-head"><span class="badge">4</span><h2>Vision, Multimodal &amp; Edge</h2></div>
     <p class="sec-intro">Seeing, embedding and counting things in the real world &mdash; often offline, often on small devices.</p>
     <div class="table">
       <div class="thead"><span>Project</span><span>What it does</span></div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/OmniEmbed">OmniEmbed</a></h3><div class="when">2026 &middot; representation learning</div></div>
-        <div><p>Reverse-engineers a shared embedding space across text, audio and image from Qwen3-Omni, studying how the modalities line up.</p><div class="tags"><span>Qwen3-Omni</span><span>embeddings</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/VLM-Distillation">VLM-Distillation</a></h3><div class="when">2026</div></div>
+        <div><p>Compresses Gemini's visual understanding and spatial reasoning into a small vision-language model, then quantizes it for edge hardware.</p><div class="tags"><span>distillation</span><span>quantization</span><span>PyTorch</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/VLM-Image-search">VLM-Image-search</a></h3><div class="when">2026 &middot; retrieval</div></div>
-        <div><p>Zero-shot text-to-image and image-to-image search on Qwen3-VL embeddings with FAISS; a local variant runs fully offline.</p><div class="tags"><span>Qwen3-VL</span><span>FAISS</span><span>FastAPI</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/OmniEmbed">OmniEmbed</a></h3><div class="when">2026</div></div>
+        <div><p>Reverse-engineers a shared embedding space across text, audio and image from Qwen3-Omni.</p><div class="tags"><span>Qwen3-Omni</span><span>embeddings</span></div></div>
       </div>
       <div class="row">
-        <div><h3>Third Umpire <span class="private">private</span></h3><div class="when">2026 &middot; sports computer vision</div></div>
-        <div><p>Delivery tracking from broadcast footage. Sparse frame sampling cut compute by 90%+ and made inference 100&times; faster at 94% accuracy (&plusmn;0.6s).</p><div class="tags"><span>OpenCV</span><span>tracking</span><span>video</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/VLM-Image-search">VLM-Image-search</a> &amp; <a href="https://github.com/TinevimboMusingadi/local-image-search">local-image-search</a></h3><div class="when">2026</div></div>
+        <div><p>Zero-shot text-to-image and image-to-image search on Qwen3-VL embeddings with FAISS; the local variant runs fully offline.</p><div class="tags"><span>Qwen3-VL</span><span>FAISS</span><span>FastAPI</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/gemini-search">gemini-search</a> &amp; gds</h3><div class="when">2026</div></div>
+        <div><p>Local multimodal document search over PDFs, diagrams and scans using Gemini's visual understanding.</p><div class="tags"><span>Gemini</span><span>PDF</span><span>vector index</span></div></div>
       </div>
       <div class="row">
         <div><h3>Ziso Counter Lens <span class="private">private</span></h3><div class="when">2026 &middot; edge CV</div></div>
         <div><p>Edge computer-vision counter for real-time customer and inventory tracking in retail.</p><div class="tags"><span>detection</span><span>real-time</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/GPNCM">GPNCM</a></h3><div class="when">2026 &middot; Indaba poster</div></div>
-        <div><p>Short-term rain forecasting from ground-station sensor streams, following an earlier flood warning system I built for rural communities.</p><div class="tags"><span>sensors</span><span>spatiotemporal</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/GPNCM">GPNCM</a></h3><div class="when">2026 &middot; Deep Learning Indaba poster</div></div>
+        <div><p>Short-term rain forecasting from ground-station sensor streams, following an earlier sensor-based flood warning system I built for rural communities.</p><div class="tags"><span>sensors</span><span>spatiotemporal</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/Quantilytix/izwi_collect">izwi_collect</a> &amp; izwi_listen</h3><div class="when">2026 &middot; speech data</div></div>
-        <div><p>Offline-first Shona voice capture and blind-listening evaluation, built for low-connectivity field collection.</p><div class="tags"><span>speech</span><span>offline-first</span></div></div>
+        <div><h3><a href="https://github.com/Quantilytix/izwi_collect">izwi_collect</a> &amp; izwi_listen</h3><div class="when">2026 &middot; speech AI</div></div>
+        <div><p>Offline-first Shona voice capture and blind-listening evaluation for low-resource African speech data.</p><div class="tags"><span>speech</span><span>offline-first</span></div></div>
       </div>
     </div>
   </section>
-
-  <section id="systems">
-    <div class="sec-head"><span class="badge">3</span><h2>Agents &amp; Production Systems</h2></div>
+  <section id="agents">
+    <div class="sec-head"><span class="badge">5</span><h2>AI Agents</h2></div>
+    <p class="sec-intro">Agents that use tools, keep memory, run code and finish long tasks.</p>
     <div class="feature">
       <p class="eyebrow">Live product &middot; Dec 2025 &ndash; present</p>
       <h3>Keeper AI &mdash; an autonomous financial analyst</h3>
-      <p>A multi-agent system: Keeper orchestrates, Clerk ingests and books, Analyst verifies. It reads your documents and does your accounts. Ledger maths runs in a sandboxed Python workspace, so the numbers are computed, not generated. Documents live in a layered neuro-symbolic index, and work is organised as Books and Sessions, like a notebook.</p>
-      <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Gemini</span><span>sandboxed execution</span><span>Cloud Run</span></div>
+      <p>A multi-agent system: Keeper orchestrates, Clerk ingests and books, Analyst verifies. It reads your documents and does your accounts. Ledger maths runs in a sandboxed Python workspace, so the numbers are computed, not generated. Documents live in a layered neuro-symbolic index, and work is organised as Books and Sessions, like a notebook. Built with a pytest benchmark suite for agent accuracy.</p>
+      <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Gemini</span><span>sandboxed execution</span><span>MongoDB / Firestore</span><span>Cloud Run</span></div>
       <a class="btn" href="https://keeper-frontend-249798843070.us-east4.run.app/books">Open Keeper &rarr;</a>
     </div>
     <div class="table">
       <div class="thead"><span>Project</span><span>What it does</span></div>
       <div class="row">
-        <div><h3>Router-AI <span class="private">private</span></h3><div class="when">2026 &middot; IQ360 Africa</div></div>
-        <div><p>Enterprise model gateway routing each request by complexity, latency budget and cost; streaming fallbacks, semantic caching, token accounting, circuit breakers (99.9% uptime).</p><div class="tags"><span>FastAPI</span><span>Redis</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/Keeper_deep_agent">Keeper Deep Agent</a> &amp; Beta_vn2</h3><div class="when">Late 2025</div></div>
+        <div><p>Extended LangChain DeepAgents with planning tools, filesystem sandboxes and hierarchical sub-agents for long-horizon tasks.</p><div class="tags"><span>LangGraph</span><span>sub-agents</span><span>sandboxes</span></div></div>
       </div>
       <div class="row">
-        <div><h3>PayIQ <span class="private">private</span></h3><div class="when">2026 &middot; IQ360 Africa</div></div>
-        <div><p>High-concurrency Spring Boot payments, reconciliation and audit trails, with real-time analytics for NetOne and government compliance portals.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/fashion-assitance">Fashion Assistant</a></h3><div class="when">March 2026</div></div>
+        <div><p>Daily outfit agent using Gemini 2.0 Flash function calling and structured outputs with live Open-Meteo weather, a wardrobe catalogue and a weekly wearing memory that resets on a cycle.</p><div class="tags"><span>Gemini</span><span>function calling</span><span>Next.js</span><span>memory</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/Keeper_deep_agent">Agent harnesses</a></h3><div class="when">2025 &ndash; 2026</div></div>
-        <div><p>Planning tools, filesystem sandboxes and sub-agents for long tasks (Keeper Deep Agent); tool-calling agents with memory; real-time Gemini Live agents driving a desktop.</p><div class="tags"><span>LangGraph</span><span>tool calling</span></div></div>
+        <div><h3><a href="https://github.com/TinevimboMusingadi/gemini-live-computer-use">Gemini Live computer use</a></h3><div class="when">2026</div></div>
+        <div><p>Real-time agent combining Gemini Live audio and vision with OS-level computer-use APIs to drive a desktop.</p><div class="tags"><span>Gemini Live</span><span>computer use</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>ai-workforce &amp; QxAgent <span class="private">private</span></h3><div class="when">2026 &middot; Quantilytix</div></div>
+        <div><p>Multi-agent enterprise platform with autonomous task assignment and real-time analytical workflows.</p><div class="tags"><span>multi-agent</span><span>event-driven</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>workspace &amp; context indexing <span class="private">private</span></h3><div class="when">2026 &middot; Latentia-zw</div></div>
+        <div><p>Document indexing engines and Model Context Protocol connectors that give LLMs clean, grounded, low-latency context.</p><div class="tags"><span>MCP</span><span>vector DB</span><span>connectors</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/codex">codex</a> &amp; <a href="https://github.com/TinevimboMusingadi/claude-code">claude-code</a></h3><div class="when">2026</div></div>
+        <div><p>Terminal coding-agent harnesses with bash execution, repository indexing and dynamic context windows.</p><div class="tags"><span>agent loop</span><span>code indexing</span></div></div>
       </div>
     </div>
   </section>
-
-  <section id="inference">
-    <div class="sec-head"><span class="badge">4</span><h2>Inference &amp; Hardware</h2></div>
+  <section id="educait">
+    <div class="sec-head"><span class="badge">6</span><h2>Educait &amp; Spin-Outs</h2></div>
+    <p class="sec-intro">Lead AI systems engineer, Feb 2024 &ndash; Sept 2026, across the education lab and two products that grew out of it. Repositories live under <a href="https://github.com/educait-ai">github.com/educait-ai</a>.</p>
     <div class="table">
       <div class="thead"><span>Project</span><span>What it does</span></div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/ssd-tpu-">ssd-tpu</a></h3><div class="when">2026 &middot; Kumar et al., ICLR 2026</div></div>
-        <div><p>JAX implementation of Speculative Speculative Decoding for Gemma and Qwen on TPUs, attacking the memory-bandwidth limit of token-by-token generation.</p><div class="tags"><span>JAX</span><span>TPU v6e</span></div></div>
+        <div><h3><a href="https://github.com/educait-ai">Educait</a></h3><div class="when">Feb &ndash; Aug 2024 &middot; parent lab</div></div>
+        <div><p>Deployed LLM features to 300+ students across 10 institutions; hybrid RAG with ChromaDB and MongoDB cut retrieval failures by about 40%.</p><div class="tags"><span>RAG</span><span>ChromaDB</span><span>MongoDB</span></div></div>
       </div>
       <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/Qwen-on-tpu">Qwen-on-tpu</a> &amp; <a href="https://github.com/TinevimboMusingadi/Gemma-4-tpu-inference">Gemma-4</a></h3><div class="when">2026 &middot; serving</div></div>
-        <div><p>vLLM serving on TPUs with a dashboard comparing autoregressive, n-gram, draft-model and EAGLE-style decoding side by side.</p><div class="tags"><span>vLLM</span><span>Next.js</span><span>SSE</span></div></div>
+        <div><h3><a href="https://github.com/educait-ai">Third Umpire</a> <span class="private">private</span></h3><div class="when">May &ndash; Sept 2026 &middot; sports CV spin-out</div></div>
+        <div><p>Delivery tracking from broadcast cricket footage, with ball-trajectory and player-kinematics experiments. Sparse frame sampling skipped redundant full-frame decoding, cutting compute by 90%+ and making inference 100&times; faster at 94% accuracy (&plusmn;0.6s).</p><div class="tags"><span>OpenCV</span><span>object tracking</span><span>video pipelines</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/educait-ai">VoiceGuide</a> <span class="private">private</span></h3><div class="when">Nov 2025 &ndash; Mar 2026 &middot; voice agent spin-out</div></div>
+        <div><p>Configurable real-time voice agent: streaming speech-to-text, Gemini tool loops and low-latency speech synthesis over WebSockets, for classroom workflows.</p><div class="tags"><span>STT/TTS</span><span>Gemini tools</span><span>WebSockets</span><span>FastAPI</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>educaitor &amp; autophocus <span class="private">private</span></h3><div class="when">2024 &ndash; 2026</div></div>
+        <div><p>AI microservices and video analytics for engagement tracking and workflow automation in education software.</p><div class="tags"><span>LLM orchestration</span><span>video analytics</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="software">
+    <div class="sec-head"><span class="badge">7</span><h2>Software Engineering</h2></div>
+    <p class="sec-intro">Backends, payments, networking and security &mdash; written to last.</p>
+    <div class="table">
+      <div class="thead"><span>Project</span><span>What it does</span></div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/my-bit-chat">my-bit-chat</a> &amp; <a href="https://github.com/TinevimboMusingadi/Campus-Connect">Campus-Connect</a></h3><div class="when">2025 &ndash; 2026</div></div>
+        <div><p>Peer-to-peer secure messaging and a campus backend: TCP sockets, cryptographic key exchange and concurrent Go services.</p><div class="tags"><span>Go</span><span>TCP</span><span>crypto handshakes</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/Secure-Banking-App">Secure-Banking-App</a></h3><div class="when">2025</div></div>
+        <div><p>Java banking app built on strict OOP, RBAC, input sanitisation and defense-in-depth.</p><div class="tags"><span>Java</span><span>security</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3>cryptography <span class="private">private</span></h3><div class="when">2025 &ndash; 2026</div></div>
+        <div><p>Symmetric ciphers, hash functions and asymmetric protocols implemented from scratch in Python, C and Go.</p><div class="tags"><span>C</span><span>Go</span><span>number theory</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/concurrency-in-python">concurrency-in-python</a> &amp; Mastering_C</h3><div class="when">2025</div></div>
+        <div><p>Threads, mutexes, condition variables and memory management written by hand, without AI.</p><div class="tags"><span>asyncio</span><span>POSIX threads</span><span>pointers</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/fixmycd">fixmycd</a></h3><div class="when">2026</div></div>
+        <div><p>Developer tool with a Python backend that diagnoses and fixes broken CI/CD configurations.</p><div class="tags"><span>FastAPI</span><span>git hooks</span><span>CLI</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/quizme">quizme</a> &amp; <a href="https://github.com/TinevimboMusingadi/Plant-Pilot">Plant-Pilot</a></h3><div class="when">2025</div></div>
+        <div><p>Small web apps: quizzes generated from markdown notes, and plant-health analysis with Gemini Flash.</p><div class="tags"><span>Gemini Flash</span><span>JavaScript</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="competitions">
+    <div class="sec-head"><span class="badge">8</span><h2>Competitions &amp; Hackathons</h2></div>
+    <div class="table">
+      <div class="thead"><span>Project</span><span>What it does</span></div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/indabax_zimbabwe_hackathon">IndabaX Zimbabwe</a></h3><div class="when">2025 &ndash; 2026</div></div>
+        <div><p>ML for Zimbabwe's banking sector: credit scoring, fraud detection and rural access.</p><div class="tags"><span>XGBoost</span><span>feature engineering</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/Google-Tunix-Hack">Google Tunix Hack</a> &amp; <a href="https://github.com/TinevimboMusingadi/zindi-spoofing">zindi-spoofing</a></h3><div class="when">Late 2025</div></div>
+        <div><p>Audio and biometric spoofing detection and edge-optimised classifiers.</p><div class="tags"><span>audio</span><span>signal processing</span></div></div>
+      </div>
+      <div class="row">
+        <div><h3><a href="https://github.com/TinevimboMusingadi/GCI">GCI</a></h3><div class="when">2026</div></div>
+        <div><p>Predictive analytics pipeline with ensembles and careful cross-validation.</p><div class="tags"><span>ensembles</span><span>CV</span></div></div>
       </div>
     </div>
   </section>
 
-  <section id="research">
-    <div class="sec-head"><span class="badge">5</span><h2>Interpretability Research</h2></div>
-    <div class="table">
-      <div class="row">
-        <div><h3><a href="https://github.com/TinevimboMusingadi/lm-world-model">lm-world-model</a> &amp; <a href="https://github.com/TinevimboMusingadi/J-nuerons">J-neurons</a></h3><div class="when">2026</div></div>
-        <div><p>Do small language models simulate computation or memorise patterns? Probes, logit lens and activation patching over 10,000+ synthetic execution traces, plus neuron-level studies.</p><div class="tags"><span>TransformerLens</span><span>probing</span></div></div>
-      </div>
+  <section id="skills">
+    <div class="sec-head"><span class="badge">9</span><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Model training</h3><p>SFT, LoRA / PEFT, GRPO &amp; RL, knowledge distillation, quantization, evaluation design, dataset curation</p></div>
+      <div class="skill"><h3>Inference</h3><p>vLLM, speculative decoding, PagedAttention, continuous batching, TPU serving, latency &amp; cost optimisation</p></div>
+      <div class="skill"><h3>Vision &amp; multimodal</h3><p>VLMs, multimodal embeddings, detection, video pipelines, audio models, OpenCV, FAISS</p></div>
+      <div class="skill"><h3>Agents</h3><p>multi-agent orchestration, tool &amp; function calling, sandboxed code execution, memory, RAG, MCP, computer use, voice agents</p></div>
+      <div class="skill"><h3>Research</h3><p>mechanistic interpretability, probing, activation patching, adaptive compute, statistical evaluation</p></div>
+      <div class="skill"><h3>ML stack</h3><p>PyTorch, JAX, Flax, MaxText, Tunix, Optax, Orbax, Hugging Face (Transformers, TRL), DeepSpeed</p></div>
+      <div class="skill"><h3>Software</h3><p>Python, Go, Java (Spring Boot), TypeScript (Next.js, React), C; FastAPI, REST, WebSockets, SSE</p></div>
+      <div class="skill"><h3>Infra &amp; data</h3><p>Google Cloud (TPUs, Cloud Run, GCS, Firestore), Docker, Terraform, Slurm, Redis, PostgreSQL, MongoDB, Linux</p></div>
+      <div class="skill"><h3>Security</h3><p>B.Tech Information Security; RBAC, input validation, cryptography from scratch, adversarial evaluation</p></div>
     </div>
   </section>
 
   <section id="talks">
-    <div class="sec-head"><span class="badge">6</span><h2>Talks &amp; Education</h2></div>
+    <div class="sec-head"><span class="badge">10</span><h2>Talks &amp; Education</h2></div>
     <ul class="talks">
-      <li>Deep Learning Indaba 2026 &mdash; poster, GPNCM</li>
+      <li>Deep Learning Indaba 2026, Abuja &mdash; poster, GPNCM</li>
       <li>GDG DevFest &mdash; <em>Building Human-AI Systems for Responsible AI</em></li>
       <li>Deep Learning Indaba &mdash; <em>What are AI Agents</em> &middot; Zimbabwe AI Week &mdash; <em>Local Language LLMs</em></li>
       <li>U.S. Embassy &amp; HIT &mdash; <em>AI for Social Good</em> &middot; ISEF 4th place (SAILFLOW, MIT Solve)</li>
+      <li>Google Cloud TPU Builder Program</li>
       <li>B.Tech (Hons) Information Security &amp; Assurance, Harare Institute of Technology (2025&ndash;2029)</li>
     </ul>
   </section>
